@@ -1,0 +1,57 @@
+@use '../Shared/functions' as *;
+
+@mixin text {
+    font-size: crem(15px);
+    line-height: 2em;
+    font-weight: 500;
+}
+
+.text {
+    @include text
+}
+
+@mixin subtitle {
+    font-size: crem(24px);
+    line-height: 2.6em;
+    font-weight: 500;
+}
+
+.subtitle {
+    @include subtitle;
+}
+
+.title {
+    font-size: crem(64px);
+    line-height: 1.25em;
+    font-weight: 700;
+}
+
+@mixin small {
+    font-size: crem(13px);
+    line-height: 1.538em;
+    font-weight: 500;
+}
+
+.small {
+    @include small;
+}
+
+@mixin heading {
+    font-size: crem(24px);
+    line-height: 1.333em;
+    font-weight: 400;
+}
+
+.heading {
+    @include heading;
+}
+
+@mixin medium {
+    font-size: crem(48px);
+    line-height: 1em;
+    font-weight: 400;
+}
+
+.medium {
+    @include medium;
+}
