@@ -3,7 +3,7 @@
 
 .main-header {
     @extend .header;
-    
+
     &__list {
         display: flex;
         justify-content: start;
@@ -19,19 +19,24 @@
 
         &:hover {
             background-color: var(--grey);
+            color: var(--black);
         }
     }
 
-    // &__odder-list {
-    //     &:hover {
-    //         background-color: var(--grey);
-    //         color: var(--black);
-    //     }
-    // }
+    &__odder-list {
+        display: none;
+
+        &:hover {
+            background-color: var(--grey);
+            color: var(--black);
+        }
+
+        &Item {
+            z-index: 999;
+        }
+    }
 
     &__subtitle {
-        color: var(--white);
-
         &:hover {
             color: var(--black);
         }

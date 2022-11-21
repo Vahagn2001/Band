@@ -1,4 +1,6 @@
 @use './functions' as *;
+@use './colors' as *;
+@use './typhography' as *;
 
 html {
     font-size: $html-font-size;

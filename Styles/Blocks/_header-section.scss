@@ -2,7 +2,6 @@
 @use '../Shared/typhography' as *;
 
 .header-section {
-
     &__title {
         @extend .medium;
     }
