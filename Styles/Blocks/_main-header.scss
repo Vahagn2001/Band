@@ -1,0 +1,47 @@
+@use '../Shared/functions' as *;
+
+.main-header {
+    &__list {
+        display: flex;
+        justify-content: start;
+        background-color: var(--black);
+        gap: crem(30px);
+    }
+
+    &__list-item {
+        padding: crem(10px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &:hover {
+            background-color: var(--grey);
+        }
+    }
+
+    // &__odder-list {
+    //     &:hover {
+    //         background-color: var(--grey);
+    //         color: var(--black);
+    //     }
+    // }
+
+    &__subtitle {
+        color: var(--white);
+
+        &:hover {
+            color: var(--black);
+        }
+    }
+
+    &__icon {
+        color: var(--white);
+        padding: crem(20px);
+
+        &:hover {
+            background-color: var(--red);
+            color: var(--white);
+        }
+    }
+
+}
