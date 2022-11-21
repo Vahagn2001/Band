@@ -161,7 +161,7 @@ html {
   width: 0;
 }
 
-.text, .main-header__list {
+.text, .main-header__list, .main-header__list-item {
   font-size: 1.5rem;
   line-height: 2em;
   font-weight: 500;
@@ -176,7 +176,7 @@ html {
 .heading {
   font-size: 2.4rem;
   line-height: 1.333em;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .medium, .header-section__title {
@@ -200,14 +200,14 @@ body {
 .main-header__list {
   color: var(--white);
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   background-color: var(--black);
-  gap: 3rem;
 }
 .main-header__list-item {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
   align-items: center;
   color: var(--white);
 }
@@ -215,11 +215,25 @@ body {
   background-color: var(--grey);
   color: var(--black);
 }
-.main-header__subtitle {
+.main-header__dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
   display: none;
 }
-.main-header__subtitle:hover + .main-header__odder-list {
+.main-header__dropdown:hover {
+  visibility: visible;
+  opacity: 1;
   display: block;
+}
+.main-header__subtitle {
+  white-space: nowrap;
+  display: block;
+}
+.main-header__subtitle:hover {
   background-color: var(--grey);
   color: var(--black);
 }

@@ -6,15 +6,16 @@
         @extend .text;
         color: var(--white);
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         background-color: var(--black);
-        gap: crem(30px);
     }
 
     &__list-item {
         padding: crem(10px);
+        @extend .text;
         display: flex;
         flex-wrap: wrap;
+        justify-content: start;
         align-items: center;
         color: var(--white);
 
@@ -24,24 +25,62 @@
         }
     }
 
-    &__subtitle {
-        display: none;
+    &__dropdown {
+        display: block;
+        width: $menu_WIDTH;
+        height: 40px;
+        padding: 12px 0 0;
+        background: #9dc852;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.3s;
 
-        &:hover+.main-header__odder-list {
+        &:before {
+            content: "";
             display: block;
-            background-color: var(--grey);
-            color: var(--black);
+            height: 0;
+            border-top: 5px solid #9dc852;
+            border-left: ($menu_WIDTH / 2) solid transparent;
+            border-right: ($menu_WIDTH / 2) solid transparent;
+            border-bottom: 0 solid #dddddd;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 101;
+            transition:
+                0.2s 0.2s border-top ease-out,
+                0.3s border-top-color;
+
+            &:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
         }
-    }
 
-    &__icon {
-        color: var(--white);
-        padding: crem(20px);
 
-        &:hover {
-            background-color: var(--red);
+
+        &__subtitle {
+            white-space: nowrap;
+            display: block;
+
+            &:hover {
+                background-color: var(--grey);
+                color: var(--black);
+            }
+        }
+
+        &__icon {
             color: var(--white);
-        }
-    }
+            padding: crem(20px);
 
+            &:hover {
+                background-color: var(--red);
+                color: var(--white);
+            }
+        }
+
+    }
 }
