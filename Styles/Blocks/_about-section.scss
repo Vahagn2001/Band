@@ -3,17 +3,24 @@
 
 .about-section {
     text-align: center;
-    padding-left: crem(10px);
-    padding-right: crem(10px);
+    padding-left: crem(200px);
+    padding-right: crem(200px);
+
 
     &__title {
-        @extend .medium;
+        @extend .subtitle;
         text-transform: uppercase;
     }
 
     &__subtitle {
         @extend .text;
+        font-style: italic;
         color: var(--grey);
         
+    }
+
+    &__string {
+    text-align: justify;
+
     }
 }

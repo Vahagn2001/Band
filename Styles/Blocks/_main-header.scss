@@ -28,6 +28,11 @@
     }
 
     &__subtitle {
+        @extend .medium;
+        text-transform: uppercase;
+
+
+
         &:hover {
             background-color: var(--grey);
             color: var(--black);
@@ -40,13 +45,51 @@
         display: flex;
         padding: crem(20px);
         align-items: center;
-        margin-left: crem(510px);
         justify-content: flex-end;
 
         &:hover {
             background-color: var(--red);
-            color: var(--white);
-            margin-left: crem(510px);
+            color: inherit;
+        }
+    }
+
+}
+
+.dropdown-btn {
+    @extend .medium;
+    text-transform: uppercase;
+    color: var(--white);
+
+    &__list {
+        display: none;
+    }
+
+    &__list-item {
+        display: block;
+    }
+
+    &__icon {
+        box-sizing: border-box;
+    }
+
+    &:hover {
+        color: var(--black);
+
+        &__list {
+            color: var(--black);
+            background-color: var(--white);
+            display: block;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        &__list-item {
+            width: 100%;
+            display: block;
+            padding: 8px 16px;
+            text-align: left;
+            white-space: normal;
+            outline: 0;
         }
     }
 }
