@@ -2,7 +2,7 @@
 
 @mixin text {
     font-size: crem(15px);
-    line-height: 2em;
+    line-height: 1.5em;
     font-weight: 500;
 }
 
@@ -18,8 +18,8 @@
 
 @mixin subtitle {
     font-size: crem(30px);
-    line-height: 2em;
-    font-weight: 300;
+    line-height: 1.5em;
+    font-weight: 400;
 }
 
 .subtitle {

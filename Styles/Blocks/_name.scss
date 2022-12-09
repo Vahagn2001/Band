@@ -1,0 +1,26 @@
+@use '../Shared/functions' as *;
+@use '../Shared/typhography' as *;
+
+.name {
+    padding-left: crem(200px);
+    padding-right: crem(200px);
+    padding-bottom: crem(100px);
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: crem(50px);
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: crem(4px);
+    }
+
+    &__string {
+        text-align: center;
+        @extend .medium;
+        padding-bottom: crem(10px);
+    }
+}

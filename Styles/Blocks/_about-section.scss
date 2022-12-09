@@ -5,6 +5,7 @@
     text-align: center;
     padding-left: crem(200px);
     padding-right: crem(200px);
+    margin-bottom: crem(100px);
 
 
     &__title {
@@ -15,7 +16,7 @@
     &__subtitle {
         @extend .text;
         font-style: italic;
-        color: var(--grey);
+        opacity: 0.60;
         
     }
 
