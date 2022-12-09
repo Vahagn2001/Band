@@ -2,9 +2,33 @@
 @use '../Shared/typhography' as *;
 
 .header-section {
+    text-align: center;
+    height: crem(650px);
+    color: var(--white);
+    margin-bottom: crem(100px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+
     &__title {
-        @extend .medium;
+        position: absolute;
+        bottom: crem(60px);
+        @extend .subtitle;
     }
 
+    &__subtitle {
+        position: absolute;
+        bottom: crem(30px);
+        @extend .text;
+    }
+
+    &__img {
+        box-sizing: border-box;
+        border-style: none;
+    }
 
 }

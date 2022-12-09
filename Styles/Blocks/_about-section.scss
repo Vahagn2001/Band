@@ -1,0 +1,19 @@
+@use '../Shared/functions' as *;
+@use '../Shared/typhography' as *;
+
+.about-section {
+    text-align: center;
+    padding-left: crem(10px);
+    padding-right: crem(10px);
+
+    &__title {
+        @extend .medium;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @extend .text;
+        color: var(--grey);
+        
+    }
+}
