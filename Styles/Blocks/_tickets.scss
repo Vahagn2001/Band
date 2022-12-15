@@ -1,0 +1,31 @@
+@use '../Shared/functions' as *;
+@use '../Shared/typhography' as *;
+
+
+.tickets {
+    padding-top: crem(10px);
+    background-color: var(--black);
+    padding-left: crem(150px);
+    padding-right: crem(150px);
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: crem(20px);
+        box-sizing: border-box;
+    }
+
+    &__title,
+    &__string {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    &__subtitle {
+        background-color: var(--white);
+        color: var(--darkGrey);
+    }
+
+}

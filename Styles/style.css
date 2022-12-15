@@ -238,7 +238,6 @@ body {
   display: flex;
   padding: 2rem;
   align-items: center;
-  margin-left: 57rem;
   justify-content: flex-end;
 }
 .main-header__icon:hover {
@@ -345,7 +344,7 @@ body {
 
 .tourdates {
   padding-top: 6.4rem;
-  padding-bottom: 6.4rem;
+  padding-bottom: 1rem;
   padding-left: 20rem;
   padding-right: 20rem;
   background-color: var(--black);
@@ -388,6 +387,33 @@ body {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   box-sizing: border-box;
-  display: inline-block;
   float: right;
+}
+
+.tickets {
+  padding-top: 1rem;
+  background-color: var(--black);
+}
+.tickets__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+.tickets__img {
+  vertical-align: middle;
+}
+.tickets__list-item {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+.tickets__title, .tickets__string {
+  background-color: var(--white);
+  color: var(--black);
+}
+.tickets__subtitle {
+  background-color: var(--white);
+  color: var(--darkGrey);
 }/*# sourceMappingURL=style.css.map */
