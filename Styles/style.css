@@ -555,7 +555,7 @@ body {
 }
 
 .contact {
-  padding: 6.4rem 26.6rem;
+  padding: 10rem 20rem;
 }
 .contact__title {
   color: var(--black);
@@ -591,6 +591,59 @@ body {
   display: block;
   width: 31.5rem;
   margin-top: 1rem;
+}
+.contact__btn {
+  float: right;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1000px) {
+  .contact {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contact {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .contact__main-block {
+    display: block;
+    text-align: center;
+  }
+  .contact__second-block {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact__second-block {
+    flex-wrap: wrap;
+  }
+  .contact__email-input, .contact__name-input, .contact__msg-input {
+    padding: 0.5rem 0.5rem;
+    width: 15rem;
+  }
+  .contact__msg-input {
+    width: -webkit-fill-available;
+  }
 }
 
 .footer {

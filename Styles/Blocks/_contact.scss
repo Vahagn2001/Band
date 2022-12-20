@@ -4,7 +4,7 @@
 
 
 .contact {
-    padding: crem(64px) crem(266px);
+    padding: crem(100px) crem(200px);
 
     &__title {
         @extend .subtitle;
@@ -52,6 +52,67 @@
         display: block;
         width: crem(315px);
         margin-top: crem(10px);
+    }
+
+    &__btn {
+        float: right;
+        background-color: var(--black);
+        color: var(--white);
+        padding: crem(10px) crem(20px);
+        margin-top: crem(10px);
+        text-transform: uppercase;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        padding-left: crem(100px);
+        padding-right: crem(100px);
+    }
+
+    @media screen and (max-width: 750px) {
+        padding-left: crem(50px);
+        padding-right: crem(50px);
+    }
+
+
+    @media screen and (max-width: 600px) {
+        padding-left: crem(10px);
+        padding-right: crem(10px);
+    }
+
+
+    @media screen and (max-width: 550px) {
+        padding-left: crem(10px);
+        padding-right: crem(10px);
+
+        &__main-block {
+            display: block;
+            text-align: center;
+        }
+
+        &__second-block {
+            display: flex;
+            justify-content: center;
+            padding-top: crem(20px);
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__second-block {
+            flex-wrap: wrap;
+        }
+
+
+        &__email-input,
+        &__name-input,
+        &__msg-input {
+            padding: crem(5px) crem(5px);
+            width: crem(150px);
+        }
+
+        &__msg-input {
+            width: -webkit-fill-available;
+        }
     }
 
 }
