@@ -1,0 +1,23 @@
+@use '../Shared/functions' as *;
+@use '../Shared/typhography' as *;
+
+
+.contact {
+    text-align: center;
+    margin: crem(100px) crem(200px);
+    box-sizing: inherit;
+    display: block;
+
+
+    &__title {
+        text-transform: uppercase;
+        @extend .subtitle;
+    }
+
+    &__subtitle {
+        @extend .text;
+        color: var(--grey);
+        font-style: italic;
+    }
+
+}

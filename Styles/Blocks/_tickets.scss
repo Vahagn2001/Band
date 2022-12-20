@@ -5,27 +5,62 @@
 .tickets {
     padding-top: crem(10px);
     background-color: var(--black);
-    padding-left: crem(150px);
-    padding-right: crem(150px);
+    padding-left: crem(200px);
+    padding-right: crem(200px);
+    padding-bottom: crem(100px);
     
     &__list {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: crem(20px);
+        margin-top: crem(50px);
         box-sizing: border-box;
+    }
+
+    &__list-item {
+        max-width: 300px;
+        height: auto;
+        background-color: var(--white);
+        padding-bottom: crem(20px);
     }
 
     &__title,
     &__string {
-        background-color: var(--white);
         color: var(--black);
+        padding-top: crem(10px);
+        padding-left: crem(20px);
+        padding-right: crem(20px);
     }
 
     &__subtitle {
-        background-color: var(--white);
         color: var(--darkGrey);
+        padding-left: crem(20px);
+        padding-right: crem(20px);
+    }
+
+    &__img {
+        vertical-align: middle;
+
+        &:hover {
+            transition: 0.5s;
+            opacity: 0.60;
+        }
+    }
+
+    &__btn {
+        background-color: var(--black);
+        color: var(--white);
+        margin-left: crem(20px);
+        padding: crem(10px);
+        margin-top: crem(10px);
+        @extend .text;
+
+        &:hover {
+            background-color: var(--grey);
+            color: var(--black);
+            transition: 0.5s;
+        }
     }
 
 }

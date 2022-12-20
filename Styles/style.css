@@ -162,7 +162,7 @@ html {
   width: 0;
 }
 
-.text, .tourdates__subtitle, .about-section__subtitle, .header-section__subtitle {
+.text, .contact__subtitle, .tickets__btn, .tourdates__subtitle, .about-section__subtitle, .header-section__subtitle {
   font-size: 1.5rem;
   line-height: 1.5em;
   font-weight: 500;
@@ -174,10 +174,11 @@ html {
   font-weight: 700;
 }
 
-.subtitle, .tourdates__title, .about-section__title, .header-section__title {
+.subtitle, .contact__title, .tourdates__title, .about-section__title, .header-section__title {
   font-size: 3rem;
   line-height: 1.5em;
   font-weight: 400;
+  letter-spacing: 0.4rem;
 }
 
 .heading {
@@ -210,6 +211,9 @@ body {
   justify-content: start;
   flex-grow: 1;
   background-color: var(--black);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   box-shadow: 0px 2px 24px 7px rgba(0, 0, 0, 0.7803921569);
 }
 .main-header__list-item {
@@ -227,13 +231,14 @@ body {
 }
 .main-header__subtitle {
   text-transform: uppercase;
+  color: var(--white);
 }
 .main-header__subtitle:hover {
   background-color: var(--grey);
   color: var(--black);
 }
 .main-header__icon {
-  flex-grow: 1;
+  margin-left: auto;
   color: var(--white);
   display: flex;
   padding: 2rem;
@@ -242,18 +247,18 @@ body {
 }
 .main-header__icon:hover {
   background-color: var(--red);
-  color: inherit;
+  color: var(--white);
 }
 
 .dropdown-btn {
   text-transform: uppercase;
-  color: var(--white);
+  top: 50px;
 }
 .dropdown-btn__list {
   display: none;
 }
 .dropdown-btn__list-item {
-  display: block;
+  display: none;
 }
 .dropdown-btn__icon {
   box-sizing: border-box;
@@ -266,7 +271,7 @@ body {
   background-color: var(--white);
   display: block;
   min-width: 160px;
-  z-index: 999;
+  z-index: 1;
 }
 .dropdown-btn:hover__list-item {
   width: 100%;
@@ -275,7 +280,7 @@ body {
   text-align: left;
   white-space: normal;
   outline: 0;
-  z-index: 999;
+  z-index: 1;
 }
 
 .header-section {
@@ -302,7 +307,6 @@ body {
 .header-section__img {
   box-sizing: border-box;
   border-style: none;
-  z-index: -1;
 }
 
 .about-section {
@@ -393,27 +397,97 @@ body {
 .tickets {
   padding-top: 1rem;
   background-color: var(--black);
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-bottom: 10rem;
 }
 .tickets__list {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 5rem;
   box-sizing: border-box;
+}
+.tickets__list-item {
+  max-width: 300px;
+  height: auto;
+  background-color: var(--white);
+  padding-bottom: 2rem;
+}
+.tickets__title, .tickets__string {
+  color: var(--black);
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.tickets__subtitle {
+  color: var(--darkGrey);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .tickets__img {
   vertical-align: middle;
 }
-.tickets__list-item {
-  margin-left: 15rem;
-  margin-right: 15rem;
+.tickets__img:hover {
+  transition: 0.5s;
+  opacity: 0.6;
 }
-.tickets__title, .tickets__string {
-  background-color: var(--white);
+.tickets__btn {
+  background-color: var(--black);
+  color: var(--white);
+  margin-left: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.tickets__btn:hover {
+  background-color: var(--grey);
   color: var(--black);
+  transition: 0.5s;
 }
-.tickets__subtitle {
-  background-color: var(--white);
+
+.contact {
+  text-align: center;
+  margin: 10rem 20rem;
+  box-sizing: inherit;
+  display: block;
+}
+.contact__title {
+  text-transform: uppercase;
+}
+.contact__subtitle {
+  color: var(--grey);
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 20rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+.footer__icon {
+  font-size: 2.5rem;
   color: var(--darkGrey);
+}
+.footer__icon:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.footer__string {
+  color: var(--darkGrey);
+}
+.footer__link {
+  -webkit-text-decoration: revert;
+          text-decoration: revert;
 }/*# sourceMappingURL=style.css.map */

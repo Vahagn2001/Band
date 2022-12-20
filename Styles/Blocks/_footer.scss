@@ -1,0 +1,40 @@
+@use '../Shared/functions' as *;
+@use '../Shared/typhography' as *;
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: crem(100px) crem(200px);
+    cursor: pointer;
+    flex-direction: column;
+    gap: crem(10px);
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: crem(5px);
+    }
+
+    &__icon {
+        font-size: crem(25px);
+        color: var(--darkGrey);
+
+        &:hover {
+            opacity: 0.60;
+            transition: 0.5s;
+        }
+    }
+
+    &__string {
+        color: var(--darkGrey);
+
+    }
+
+    &__link {
+        text-decoration: revert;
+    }
+}
