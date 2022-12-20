@@ -56,6 +56,15 @@
         }
     }
 
+    @media screen and (max-width: 451px) {
+        &__list-item {
+            @include small;
+        }
+
+        &__subtitle {
+            @include small;
+        }
+    }
 }
 
 .dropdown-btn {
@@ -95,5 +104,9 @@
             outline: 0;
             z-index: 1;
         }
+    }
+
+    @media screen and (max-width: 451px) {
+        @include small;
     }
 }

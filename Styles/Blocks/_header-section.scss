@@ -31,4 +31,9 @@
         border-style: none;
     }
 
+
+    @media screen and (max-width: 400px) {
+        height: crem(240px);
+        margin-bottom: crem(50px);
+    }
 }

@@ -37,4 +37,14 @@
     &__link {
         text-decoration: revert;
     }
+
+    @media screen and (max-width: 565px) {
+        margin-left: crem(100px);
+        margin-right: crem(100px);
+    }
+
+    @media screen and (max-width: 370px) {
+        margin-left: crem(50px);
+        margin-right: crem(50px);
+    }
 }

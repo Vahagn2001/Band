@@ -155,32 +155,46 @@
         </section>
 
         <section class="contact">
-            <h2 class="contact__title">Contact</h2>
-            <p class="contact__subtitle">Fan? Drop a note!</p>
-            <div class="contact__description">
-                <ul class="contact__list">
-                    <li class="contact__list-item">
+            <h2 class="contact__title">
+                Contact
+            </h2>
+
+            <p class="contact__subtitle">
+                Fan? Drop a note!
+            </p>
+
+            <div class="contact__main-block">
+                <div class="contact__first-block">
+                    <p class="contact__string">
                         <i class="fa fa-location-dot contact__icon"></i>
-                        <p class="contact__string">Chicago, US</p>
-                    </li>
-                    <li class="contact__list-item">
+                        Chicago, US
+                    </p>
+
+                    <p class="contact__string">
                         <i class="fa fa-phone contact__icon"></i>
-                        <p class="contact__string">Phone: +00 151515</p>
-                    </li>
-                    <li class="contact__list-item">
+                        Phone: +00 151515
+                    </p>
+
+                    <p class="contact__string">
                         <i class="contact__icon fa fa-envelope"></i>
-                        <p class="contact__string">Email: mail@mail.com</p>
-                    </li>
-                </ul>
+                        Email: mail@mail.com
+                    </p>
+                </div>
 
-                <form class="contact__form">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Message">
-
-                </form>
-                <button type="button" class="contact__btn">Send</button>
-
+                <div class="contact__second-block">
+                    <form class="contact__form">
+                        <ul class="contact_list">
+                            <li class="contact__list-item">
+                                <input class="contact__name-input" type="text" placeholder="Name" name="name">
+                                <input class="contact__email-input" type="email" placeholder="Email" name="email">
+                            </li>
+                        </ul>
+                        <input class="contact__msg-input" type="text" placeholder="Message" name="message">
+                        <button class="contact__btn" type="submit">
+                            Send
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
 

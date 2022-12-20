@@ -10,6 +10,16 @@
     @include text;
 }
 
+@mixin small {
+    font-size: crem(10px);
+    line-height: 0.5em;
+    font-weight: 200;
+}
+
+.small {
+    @include small;
+}
+
 .title {
     font-size: crem(64px);
     line-height: 1.25em;

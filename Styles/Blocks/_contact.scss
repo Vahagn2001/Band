@@ -2,22 +2,56 @@
 @use '../Shared/typhography' as *;
 
 
-.contact {
-    text-align: center;
-    margin: crem(100px) crem(200px);
-    box-sizing: inherit;
-    display: block;
 
+.contact {
+    padding: crem(64px) crem(266px);
 
     &__title {
-        text-transform: uppercase;
         @extend .subtitle;
+        color: var(--black);
+        margin-top: crem(20px);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: crem(20px);
     }
 
     &__subtitle {
-        @extend .text;
-        color: var(--grey);
+        text-align: center;
+        opacity: 0.60;
         font-style: italic;
+        @extend .text;
+        margin-bottom: crem(50px);
+    }
+
+    &__main-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__string {
+        @extend .medium;
+        margin-bottom: crem(7px);
+    }
+
+    &__name-input {
+        margin-right: crem(10px);
+    }
+
+    &__email-input,
+    &__name-input,
+    &__msg-input {
+        padding: crem(10px) crem(20px);
+        width: crem(130px);
+    }
+
+    &__list-item {
+        display: flex;
+    }
+
+    &__msg-input {
+        display: block;
+        width: crem(315px);
+        margin-top: crem(10px);
     }
 
 }

@@ -55,4 +55,14 @@
         box-sizing: border-box;
         float: right;
     }
+
+    @media screen and (max-width: 700px) {
+        padding-left: crem(100px);
+        padding-right: crem(100px);
+    }
+
+    @media screen and (max-width: 450px) {
+        padding-left: crem(50px);
+        padding-right: crem(50px);
+    }
 }

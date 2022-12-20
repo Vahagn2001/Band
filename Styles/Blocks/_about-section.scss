@@ -24,4 +24,14 @@
     text-align: justify;
 
     }
+
+    @media screen and (max-width: 800px) {
+        padding-left: crem(100px);
+        padding-right: crem(100px);
+    }
+
+    @media screen and (max-width: 400px) {
+        padding-left: crem(25px);
+        padding-right: crem(25px);
+    }
 }
