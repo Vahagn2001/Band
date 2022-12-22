@@ -14,10 +14,6 @@
         z-index: 1;
     }
 
-    &__menu {
-        display: none;
-    }
-
     &__list-item {
         @extend .medium;
         text-transform: uppercase;
@@ -54,27 +50,18 @@
     }
 
     @media screen and (max-width: 451px) {
+
         &__list-item:first-child,
         &__subtitle:first-child {
             display: block;
         }
 
-        &__menu {
-            display: block;
-            width: crem(30px);
-            color: var(--white);
-            position: absolute;
-            top: crem(5px);
-            right: 0;
-            font-size: crem(30px);
-        }
-
         &__list-item,
         &__subtitle,
         &__icon {
-           display: none;
+            display: none;
         }
-       
+
     }
 }
 

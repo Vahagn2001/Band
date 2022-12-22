@@ -233,9 +233,6 @@ body {
   width: 100%;
   z-index: 1;
 }
-.main-header__menu {
-  display: none;
-}
 .main-header__list-item {
   text-transform: uppercase;
   padding: 1.2rem 1.4rem;
@@ -266,15 +263,6 @@ body {
 @media screen and (max-width: 451px) {
   .main-header__list-item:first-child, .main-header__subtitle:first-child {
     display: block;
-  }
-  .main-header__menu {
-    display: block;
-    width: 3rem;
-    color: var(--white);
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
-    font-size: 3rem;
   }
   .main-header__list-item, .main-header__subtitle, .main-header__icon {
     display: none;
