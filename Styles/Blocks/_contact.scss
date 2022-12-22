@@ -41,11 +41,12 @@
     &__name-input,
     &__msg-input {
         padding: crem(10px) crem(20px);
-        width: crem(130px);
+        width: crem(150px);
     }
 
     &__list-item {
         display: flex;
+        justify-content: space-between;
     }
 
     &__msg-input {
@@ -61,6 +62,13 @@
         padding: crem(10px) crem(20px);
         margin-top: crem(10px);
         text-transform: uppercase;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: var(--grey);
+            color: var(--black);
+            cursor: pointer;
+        }
     }
 
 

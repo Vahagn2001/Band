@@ -2,8 +2,9 @@
 @use '../Shared/typhography' as *;
 
 .main-header {
+    color: var(--white);
+
     &__list {
-        color: var(--white);
         display: flex;
         justify-content: start;
         flex-grow: 1;
@@ -11,7 +12,10 @@
         position: fixed;
         width: 100%;
         z-index: 1;
-        box-shadow: 0px 2px 24px 7px #000000c7;
+    }
+
+    &__menu {
+        display: none;
     }
 
     &__list-item {
@@ -22,7 +26,6 @@
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
-        color: var(--white);
 
         &:hover {
             background-color: var(--grey);
@@ -34,12 +37,6 @@
     &__subtitle {
         @extend .medium;
         text-transform: uppercase;
-        color: var(--white);
-
-        &:hover {
-            background-color: var(--grey);
-            color: var(--black);
-        }
     }
 
     &__icon {
@@ -57,26 +54,38 @@
     }
 
     @media screen and (max-width: 451px) {
-        &__list-item {
-            @include small;
+        &__list-item:first-child,
+        &__subtitle:first-child {
+            display: block;
         }
 
-        &__subtitle {
-            @include small;
+        &__menu {
+            display: block;
+            width: crem(30px);
+            color: var(--white);
+            position: absolute;
+            top: crem(5px);
+            right: 0;
+            font-size: crem(30px);
         }
+
+        &__list-item,
+        &__subtitle,
+        &__icon {
+           display: none;
+        }
+       
     }
 }
 
 .dropdown-btn {
+    $this: #{&};
     @extend .medium;
     text-transform: uppercase;
-    top: 50px;
+    top: crem(50px);
+
 
     &__list {
-        display: none;
-    }
-
-    &__list-item {
         display: none;
     }
 
@@ -86,27 +95,29 @@
 
     &:hover {
         color: var(--black);
+        background-color: var(--grey);
 
-        &__list {
-            color: var(--black);
+
+        #{$this}__list {
+            display: block;
+            position: absolute;
+            top: 100%;
+            box-sizing: border-box;
+            left: 22.6%;
             background-color: var(--white);
-            display: block;
-            min-width: 160px;
-            z-index: 1;
+            min-width: crem(160px);
+            box-shadow: 0px 2px 24px 7px #000000c7;
+
         }
 
-        &__list-item {
-            width: 100%;
-            display: block;
-            padding: 8px 16px;
-            text-align: left;
-            white-space: normal;
-            outline: 0;
-            z-index: 1;
-        }
-    }
+        #{$this}__list-item {
+            padding: crem(10px) crem(20px);
 
-    @media screen and (max-width: 451px) {
-        @include small;
+            &:hover {
+                background-color: var(--grey);
+                padding: crem(10px) crem(20px);
+
+            }
+        }
     }
 }

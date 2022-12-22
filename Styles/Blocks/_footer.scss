@@ -22,16 +22,16 @@
     &__icon {
         font-size: crem(25px);
         color: var(--darkGrey);
+        transition: 0.5s;
 
         &:hover {
             opacity: 0.60;
-            transition: 0.5s;
+            cursor: pointer;
         }
     }
 
     &__string {
         color: var(--darkGrey);
-
     }
 
     &__link {

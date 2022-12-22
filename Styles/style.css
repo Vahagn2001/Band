@@ -147,6 +147,16 @@ button {
 }
 
 html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
   --white: #fff;
   --black: #000;
   --grey: #c0c0c0;
@@ -211,8 +221,10 @@ body {
   line-height: 3rem;
 }
 
-.main-header__list {
+.main-header {
   color: var(--white);
+}
+.main-header__list {
   display: flex;
   justify-content: start;
   flex-grow: 1;
@@ -220,7 +232,9 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1;
-  box-shadow: 0px 2px 24px 7px rgba(0, 0, 0, 0.7803921569);
+}
+.main-header__menu {
+  display: none;
 }
 .main-header__list-item {
   text-transform: uppercase;
@@ -229,7 +243,6 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  color: var(--white);
 }
 .main-header__list-item:hover {
   background-color: var(--grey);
@@ -237,11 +250,6 @@ body {
 }
 .main-header__subtitle {
   text-transform: uppercase;
-  color: var(--white);
-}
-.main-header__subtitle:hover {
-  background-color: var(--grey);
-  color: var(--black);
 }
 .main-header__icon {
   margin-left: auto;
@@ -256,26 +264,28 @@ body {
   color: var(--white);
 }
 @media screen and (max-width: 451px) {
-  .main-header__list-item {
-    font-size: 1rem;
-    line-height: 0.5em;
-    font-weight: 200;
+  .main-header__list-item:first-child, .main-header__subtitle:first-child {
+    display: block;
   }
-  .main-header__subtitle {
-    font-size: 1rem;
-    line-height: 0.5em;
-    font-weight: 200;
+  .main-header__menu {
+    display: block;
+    width: 3rem;
+    color: var(--white);
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    font-size: 3rem;
+  }
+  .main-header__list-item, .main-header__subtitle, .main-header__icon {
+    display: none;
   }
 }
 
 .dropdown-btn {
   text-transform: uppercase;
-  top: 50px;
+  top: 5rem;
 }
 .dropdown-btn__list {
-  display: none;
-}
-.dropdown-btn__list-item {
   display: none;
 }
 .dropdown-btn__icon {
@@ -283,29 +293,24 @@ body {
 }
 .dropdown-btn:hover {
   color: var(--black);
+  background-color: var(--grey);
 }
-.dropdown-btn:hover__list {
-  color: var(--black);
+.dropdown-btn:hover .dropdown-btn__list {
+  display: block;
+  position: absolute;
+  top: 100%;
+  box-sizing: border-box;
+  left: 22.6%;
   background-color: var(--white);
-  display: block;
-  min-width: 160px;
-  z-index: 1;
+  min-width: 16rem;
+  box-shadow: 0px 2px 24px 7px rgba(0, 0, 0, 0.7803921569);
 }
-.dropdown-btn:hover__list-item {
-  width: 100%;
-  display: block;
-  padding: 8px 16px;
-  text-align: left;
-  white-space: normal;
-  outline: 0;
-  z-index: 1;
+.dropdown-btn:hover .dropdown-btn__list-item {
+  padding: 1rem 2rem;
 }
-@media screen and (max-width: 451px) {
-  .dropdown-btn {
-    font-size: 1rem;
-    line-height: 0.5em;
-    font-weight: 200;
-  }
+.dropdown-btn:hover .dropdown-btn__list-item:hover {
+  background-color: var(--grey);
+  padding: 1rem 2rem;
 }
 
 .header-section {
@@ -332,6 +337,8 @@ body {
 .header-section__img {
   box-sizing: border-box;
   border-style: none;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 400px) {
   .header-section {
@@ -462,8 +469,8 @@ body {
 }
 @media screen and (max-width: 450px) {
   .tourdates {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -501,9 +508,9 @@ body {
 }
 .tickets__img {
   vertical-align: middle;
+  transition: 0.5s;
 }
 .tickets__img:hover {
-  transition: 0.5s;
   opacity: 0.6;
 }
 .tickets__btn {
@@ -512,28 +519,23 @@ body {
   margin-left: 2rem;
   padding: 1rem;
   margin-top: 1rem;
+  transition: 0.5s;
 }
 .tickets__btn:hover {
   background-color: var(--grey);
   color: var(--black);
-  transition: 0.5s;
+  cursor: pointer;
 }
-@media screen and (max-width: 320px) {
-  .tickets {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  .tickets {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+@media screen and (max-width: 451px) {
   .tickets__list-item {
     margin-bottom: 5rem;
   }
 }
 @media screen and (max-width: 600px) {
+  .tickets {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .tickets__list {
     justify-content: center;
   }
@@ -582,10 +584,11 @@ body {
 }
 .contact__email-input, .contact__name-input, .contact__msg-input {
   padding: 1rem 2rem;
-  width: 13rem;
+  width: 15rem;
 }
 .contact__list-item {
   display: flex;
+  justify-content: space-between;
 }
 .contact__msg-input {
   display: block;
@@ -599,6 +602,12 @@ body {
   padding: 1rem 2rem;
   margin-top: 1rem;
   text-transform: uppercase;
+  transition: 0.5s;
+}
+.contact__btn:hover {
+  background-color: var(--grey);
+  color: var(--black);
+  cursor: pointer;
 }
 @media screen and (max-width: 1000px) {
   .contact {
@@ -665,10 +674,11 @@ body {
 .footer__icon {
   font-size: 2.5rem;
   color: var(--darkGrey);
+  transition: 0.5s;
 }
 .footer__icon:hover {
   opacity: 0.6;
-  transition: 0.5s;
+  cursor: pointer;
 }
 .footer__string {
   color: var(--darkGrey);
